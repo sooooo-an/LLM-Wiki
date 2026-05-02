@@ -5,3 +5,10 @@
 .trash/
 99_Attachments/.thumbnails/
 .DS_Store
+
+# olw (obsidian-llm-wiki) state — local-only
+.olw/chroma/
+.olw/state.db
+.olw/compare/
+.olw/pipeline.lock
+*.log

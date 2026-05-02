@@ -1,0 +1,22 @@
+[models]
+# 18GB RAM 환경: 단일 14b 모델 (~9GB). 7b 대비 구조화 출력 안정적이고 한국어 품질 우수.
+# RAM 부담 줄이려면 fast = "qwen2.5:3b" 분리 가능 (~11GB 합계)
+fast  = "qwen2.5:14b"
+heavy = "qwen2.5:14b"
+
+[ollama]
+url = "http://localhost:11434"
+timeout = 1800        # 30분 — 14b가 한 concept 컴파일에 충분
+fast_ctx = 8192       # 18GB RAM 환경: 컨텍스트 축소로 KV 캐시 부담 ↓
+heavy_ctx = 8192      # 32k → 8k로 축소 (timeout 회피)
+
+[pipeline]
+auto_approve  = false   # 사람이 명시적으로 approve
+auto_commit   = false   # ★ git 통제권은 우리가 (olw가 임의 커밋 못 하게)
+auto_maintain = false
+watch_debounce = 3.0
+max_concepts_per_source = 8
+ingest_parallel = false
+article_max_tokens = 16384
+graph_quality_checks = true
+language = "ko"         # 한국어 위주로 운영
