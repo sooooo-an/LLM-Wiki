@@ -1,5 +1,6 @@
 .obsidian/workspace*
 .obsidian/cache
+.obsidian/graph.json
 .obsidian/plugins/*/data.json
 .trash/
 99_Attachments/.thumbnails/
