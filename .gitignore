@@ -12,3 +12,7 @@
 .olw/compare/
 .olw/pipeline.lock
 *.log
+
+# personal/ — sensitive notes (goal, cash, resume, journal). Local-only.
+# Public remote: do NOT push. Move to private repo if backup needed.
+personal/
