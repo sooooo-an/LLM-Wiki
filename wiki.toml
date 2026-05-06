@@ -12,7 +12,7 @@ heavy_ctx = 8192      # 32k → 8k로 축소 (timeout 회피)
 
 [pipeline]
 auto_approve  = false   # 사람이 명시적으로 approve
-auto_commit   = false   # ★ git 통제권은 우리가 (olw가 임의 커밋 못 하게)
+auto_commit   = true   # ★ git 통제권은 우리가 (olw가 임의 커밋 못 하게)
 auto_maintain = false
 watch_debounce = 3.0
 max_concepts_per_source = 8
